@@ -81,6 +81,11 @@ class LaravelDevkitServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(__DIR__ . '/config/laravel-devkit-modules.php','laravel-devkit-modules');
     }
 
+    public function compiles()
+    {
+        
+    }
+
     public function registerServiceProviders()
     {
         $modulesNamespace = config('laravel-devkit.namespace.module');

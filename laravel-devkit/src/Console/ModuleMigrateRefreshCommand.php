@@ -17,7 +17,7 @@ class ModuleMigrateRefreshCommand extends Command
      *
      * @var string
      */
-    protected $name = 'kit:m-refresh';
+    protected $name = 'kit:refresh';
 
     /**
      * The console command description.
@@ -80,14 +80,14 @@ class ModuleMigrateRefreshCommand extends Command
 
     protected function executeRefresh($module){
 
-        $this->call('kit:m-migrate:fresh', [
+        $this->call('kit:migrate:fresh', [
             '--module' => $module,
             '--database' => $this->option('database'),
             '--force' => $this->option('force'),
             '--pretend' => $this->option('pretend')
         ]);
 
-        $this->call('kit:m-migrate', [
+        $this->call('kit:migrate', [
             '--module' => $module,
             '--database' => $this->option('database'),
         ]);

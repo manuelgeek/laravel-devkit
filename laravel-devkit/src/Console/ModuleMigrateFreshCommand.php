@@ -19,7 +19,7 @@ class ModuleMigrateFreshCommand extends Command
      *
      * @var string
      */
-    protected $name = 'kit:m-migrate:fresh';
+    protected $name = 'kit:migrate:fresh';
 
     /**
      * The console command description.

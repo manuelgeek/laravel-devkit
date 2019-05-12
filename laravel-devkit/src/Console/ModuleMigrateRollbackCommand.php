@@ -19,7 +19,7 @@ class ModuleMigrateRollbackCommand extends Command
      *
      * @var string
      */
-    protected $name = 'kit:m-rollback';
+    protected $name = 'kit:rb';
 
     /**
      * The console command description.

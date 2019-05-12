@@ -12,7 +12,7 @@ class ModuleRequestCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $signature = 'kit:m-request {name : Request name}  {--module}';
+    protected $signature = 'kit:request {name : Request name}  {--mod}';
 
     /**
      * The console command description.

@@ -11,7 +11,7 @@ class ModuleFactoryCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $signature = 'kit:m-factory {name : Factory name} {--model= : Model} {--module=}';
+    protected $signature = 'kit:fac {name : Factory name} {--m|model= : Model} {--mod=}';
 
     /**
      * The console command description.

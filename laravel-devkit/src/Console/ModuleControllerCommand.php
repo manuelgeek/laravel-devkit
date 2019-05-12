@@ -11,7 +11,7 @@ class ModuleControllerCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $signature = 'kit:m-controller {name : Controller name} {--resource : Resource controller} {--module} {--force}';
+    protected $signature = 'kit:controller {name : Controller name} {--r|resource : Resource controller} {--mod=} {--force}';
 
     /**
      * The console command description.
@@ -29,7 +29,7 @@ class ModuleControllerCommand extends GeneratorCommand
 
     protected function getStub()
     {
-        if ($this->option('resource')) {
+        if ($this->option('resource') && $this->option('resource') != null) {
             return __DIR__ . '/../../resources/stubs/controller.resource.stub';
         }
 

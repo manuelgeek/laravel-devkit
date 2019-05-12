@@ -14,7 +14,7 @@ class ModuleMigrateSeedCommand extends Command
      *
      * @var string
      */
-    protected $name = 'kit:m-seed';
+    protected $name = 'kit:seed';
 
     /**
      * The console command description.

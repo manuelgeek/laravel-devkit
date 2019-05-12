@@ -13,7 +13,7 @@ class ModuleModelCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $signature = 'kit:m-model {name : Model name} {--migration : Model migration} {--module}';
+    protected $signature = 'kit:model {name : Model name} {--m|migration : Model migration} {--r|resource : Controller resource} {--f|factory} {--a|all} {--c|controller : Model controller} {--mod=}';
 
     /**
      * The console command description.
@@ -33,14 +33,29 @@ class ModuleModelCommand extends GeneratorCommand
     public function handle()
     {
         parent::handle();
+
         if ($this->option('migration')){
             $table = Str::plural(Str::snake(class_basename($this->argument('name'))));
 
-            $this->call('kit:m-migration',[
+            $this->call('kit:migration',[
                 'name' => "create_{$table}_table",
                 '--create' => $table,
-                '--module' => $this->module
+                '--mod' => $this->module
             ]);
+        }
+
+        if ($this->options('controller')){
+            $controller = Str::studly(class_basename($this->argument('name')));
+
+            $this->call('kit:controller', [
+                'name' => "{$controller}Controller",
+                '--mod' => $this->module,
+                '--resource' => $this->option('resource') ? $this->argument('name') : false,
+            ]);
+        }
+
+        if ($this->options('factory')){
+
         }
     }
 

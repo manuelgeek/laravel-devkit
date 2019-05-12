@@ -12,7 +12,7 @@ class ModuleMigrationCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'kit:m-migration {name : Migration name} {--module=} {--create=} {--table=}';
+    protected $signature = 'kit:migration {name : Migration name} {--mod=} {--create=} {--table=}';
 
     /**
      * The console command description.
@@ -31,10 +31,10 @@ class ModuleMigrationCommand extends Command
     {
         $modules = array_collapse(Cache::get('modules'));
 
-        if (! $this->option('module')){
+        if (! $this->option('mod')){
             $this->module = $modules[$this->choice('Choose module', $modules, "Cancel")];
         }else{
-            $this->module = $this->option('module');
+            $this->module = $this->option('mod');
         }
 
         $getOptions = $this->option();
@@ -44,7 +44,7 @@ class ModuleMigrationCommand extends Command
             $options['--'.$key] = $value;
         });
 
-        unset($options['--module']);
+        unset($options['--mod']);
 
         $modulePath =  module_path('Database/Migrations',$this->module);
         $options['--path'] = ltrim(str_replace(realpath(base_path()), '', realpath($modulePath)));

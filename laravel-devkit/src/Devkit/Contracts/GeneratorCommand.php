@@ -19,10 +19,10 @@ class GeneratorCommand extends LaravelGeneratorCommand
     {
         $modules = array_collapse(Cache::get('modules'));
 
-        if (! $this->option('module')){
+        if (! $this->option('mod')){
             $this->module = $modules[$this->choice('Choose module', $modules, "Cancel")];
         }else{
-            $this->module = $this->option('module');
+            $this->module = str_replace("=","",$this->option('mod'));
         }
 
         parent::handle();

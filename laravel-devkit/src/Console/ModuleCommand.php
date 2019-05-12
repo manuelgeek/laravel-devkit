@@ -18,7 +18,7 @@ class ModuleCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'kit:module {modulecommand} {--module=} {--name=}';
+    protected $signature = 'kit:mod {modulecommand} {--mod=} {--name=}';
 
     /**
      * The console command description.
@@ -158,16 +158,6 @@ class ModuleCommand extends Command
                 }
 
                 break;
-            case "controller":
-                $this->moduleName = $this->option('module');
-                $controllerName = $this->option('name');
-
-                if($this->moduleName && $controllerName){
-
-                }
-                else{
-                    $this->error("Missing arguments");
-                }
         }
     }
 

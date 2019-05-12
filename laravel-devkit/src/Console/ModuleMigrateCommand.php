@@ -17,7 +17,7 @@ class ModuleMigrateCommand extends Command
      *
      * @var string
      */
-    protected $name = 'kit:m-migrate';
+    protected $name = 'kit:migrate';
 
     /**
      * The console command description.

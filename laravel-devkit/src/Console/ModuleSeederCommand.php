@@ -11,7 +11,7 @@ class ModuleSeederCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $signature = 'kit:mseeder {name : Seed name} {--module=}';
+    protected $signature = 'kit:seeder {name : Seed name} {--mod=}';
 
     /**
      * The console command description.
