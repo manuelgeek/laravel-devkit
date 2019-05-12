@@ -1,0 +1,35 @@
+{
+    "name": "appslabke/laravel-devkit",
+    "description": "This is a laravel app development kit for quick development.",
+    "homepage": "https://opensource.appslab.co.ke",
+    "type": "library",
+    "keywords": ["appslab","laravel","web","devkit","module"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "AppsLab KE",
+            "email": "develoers@appslab.co.ke"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "laravel/framework": "5.6.*",
+        "php": "^7.0",
+        "nunomaduro/laravel-desktop-notifier": "2.0.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "LaravelDevkit\\" : "laravel-devkit/src/"
+        },
+        "files": [
+            "laravel-devkit/src/Support/helpers.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LaravelDevkit\\LaravelDevkitServiceProvider"
+            ]
+        }
+    }
+}

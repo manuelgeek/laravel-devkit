@@ -1,0 +1,19 @@
+{
+    "name": "DummyName",
+    "module_slug": "DummySlug",
+    "theme": "DummyDefault",
+    "source": "DummySource",
+    "version": "DummyVersion",
+    "license": "DummyLicense",
+    "authors": [
+        {
+            "name": "DummyVendor",
+            "email": "DummyEmail"
+        }
+    ],
+    "require": {
+        "php": "7.1",
+        "laravel/framework": "^5.7.*"
+    },
+    "description": "DummyDescription"
+}
