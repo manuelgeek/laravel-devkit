@@ -13,7 +13,6 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "laravel/framework": "5.6.*",
         "php": "^7.0",
         "nunomaduro/laravel-desktop-notifier": "2.0.6"
     },
