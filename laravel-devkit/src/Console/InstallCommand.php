@@ -51,8 +51,6 @@ class InstallCommand extends Command
 
         $this->line("<comment>Installation completed successfully</comment>");
 
-        $this->notify("Devkit","Devkit installation completed ... Happy coding");
-
         $this->info($this->factory->displayThankYou());
     }
 
