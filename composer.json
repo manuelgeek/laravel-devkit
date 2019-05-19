@@ -12,10 +12,6 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {
-        "php": "^7.0",
-        "nunomaduro/laravel-desktop-notifier": "2.0.6"
-    },
     "autoload": {
         "psr-4": {
             "LaravelDevkit\\" : "laravel-devkit/src/"
